@@ -33,5 +33,14 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Bam.Net\_lib\bam.net.core\bam.net.core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="bam.net.schema.org\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="bam.net.schema.org\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="bam.net.schema.org\**" />
+  </ItemGroup>
   <Import Project="bam.net.schema.org\bam.net.schema.org.projitems" Label="Shared" />
 </Project>
