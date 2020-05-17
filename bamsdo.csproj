@@ -31,7 +31,7 @@
     <DeployManifest Remove="obj\Debug\netcoreapp2.2\bamsdo.application" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\_lib\bam.net.core\bam.net.core.csproj" />
-    <ProjectReference Include="..\..\_lib\bam.net.schema.org\bam.net.schema.org.csproj" />
+    <ProjectReference Include="..\..\..\Bam.Net\_lib\bam.net.core\bam.net.core.csproj" />
   </ItemGroup>
+  <Import Project="bam.net.schema.org\bam.net.schema.org.projitems" Label="Shared" />
 </Project>
