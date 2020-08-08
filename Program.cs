@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Bam.Net
 {
     [Serializable]
-    class Program : CommandLineTestInterface
+    class Program : CommandLineTool
     {
         static void Main(string[] args)
         {

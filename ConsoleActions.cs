@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace Bam.Net
 {
     [Serializable]
-    public class ConsoleActions : CommandLineTestInterface
+    public class ConsoleActions : CommandLineTool
     {
         static string _genDir = "/opt/bam/src/_gen/Schema.org";//"C:\\bam\\src\\_gen\\Schema.org";
         static string _tmpDir = "/opt/bam/src/_gen/Schema.org.tmp";//"C:\\bam\\src\\_gen\\Schema.org.tmp";
