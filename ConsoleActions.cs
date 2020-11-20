@@ -16,11 +16,11 @@ namespace Bam.Net
     [Serializable]
     public class ConsoleActions : CommandLineTool
     {
-        static string _genDir = "/opt/bam/src/_gen/Schema.org";//"C:\\bam\\src\\_gen\\Schema.org";
-        static string _tmpDir = "/opt/bam/src/_gen/Schema.org.tmp";//"C:\\bam\\src\\_gen\\Schema.org.tmp";
+        private static string _genDir = "/opt/bam/src/_gen/Schema.org";//"C:\\bam\\src\\_gen\\Schema.org";
+        private static string _tmpDir = "/opt/bam/src/_gen/Schema.org.tmp";//"C:\\bam\\src\\_gen\\Schema.org.tmp";
 
         public static HashSet<string> FailedTypeNames { get; private set; }
-        static HashSet<string> _writtenTypes;
+        private static HashSet<string> _writtenTypes;
         [ConsoleAction("Generate Schema.org.cs files")]
         public void Generate()
         {
@@ -30,10 +30,7 @@ namespace Bam.Net
             FailedTypeNames = new HashSet<string>();
             _writtenTypes = new HashSet<string>();
             HashSet<SpecificType> types = GetTypes();
-            types.ToList().ForEach(currentType =>
-            {
-                WriteCsCode(currentType);
-            });
+            types.ToList().ForEach(WriteCsCode);
 
             foreach (string failedType in FailedTypeNames)
             {
@@ -44,7 +41,7 @@ namespace Bam.Net
                 }
                 catch (Exception ex)
                 {
-                    OutLineFormat("Failed to delete file {0}: {1}", ConsoleColor.Magenta, file.FullName, ex.Message);
+                    Message.PrintLine("Failed to delete file {0}: {1}", ConsoleColor.Magenta, file.FullName, ex.Message);
                 }
             }
         }
