@@ -1,7 +1,7 @@
 ﻿<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>bamsdo</id>
-    <version>1.0.5-test+15caf49</version>
+    <version>1.0.5-test+cccee4a</version>
     <authors>Bryan Apellanes</authors>
     <description>bamsdo</description>
   </metadata>

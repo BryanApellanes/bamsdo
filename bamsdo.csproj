@@ -4,7 +4,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>Bam.Net.Application</RootNamespace>
     <PackageId>bamsdo</PackageId>
-    <Version>1.0.5-test+15caf49</Version>
+    <Version>1.0.5-test+cccee4a</Version>
     <Authors>Bryan Apellanes</Authors>
     <Company>Three Headz</Company>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
