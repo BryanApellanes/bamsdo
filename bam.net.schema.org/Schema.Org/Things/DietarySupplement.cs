@@ -6,17 +6,17 @@ namespace Bam.Net.Schema.Org.Things
 	public class DietarySupplement: Substance
 	{
 		///<summary>An active ingredient, typically chemical compounds and/or biologic substances.</summary>
-		public Text ActiveIngredient {get; set;}
+		public new Text ActiveIngredient {get; set;}
 		///<summary>Descriptive information establishing a historical perspective on the supplement. May include the rationale for the name, the population where the supplement first came to prominence, etc.</summary>
 		public Text Background {get; set;}
 		///<summary>True if this item's name is a proprietary/brand name (vs. generic name).</summary>
 		public Boolean IsProprietary {get; set;}
 		///<summary>The drug or supplement's legal status, including any controlled substance schedules that apply.</summary>
-		public OneOfThese<DrugLegalStatus,MedicalEnumeration,Text> LegalStatus {get; set;}
+		public new OneOfThese<DrugLegalStatus,MedicalEnumeration,Text> LegalStatus {get; set;}
 		///<summary>The manufacturer of the product.</summary>
 		public Organization Manufacturer {get; set;}
 		///<summary>Recommended intake of this supplement for a given population as defined by a specific recommending authority.</summary>
-		public MaximumDoseSchedule MaximumIntake {get; set;}
+		public new MaximumDoseSchedule MaximumIntake {get; set;}
 		///<summary>The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.</summary>
 		public Text MechanismOfAction {get; set;}
 		///<summary>The generic name of this drug or supplement.</summary>

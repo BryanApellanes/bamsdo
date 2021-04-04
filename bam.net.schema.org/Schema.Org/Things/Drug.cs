@@ -6,7 +6,7 @@ namespace Bam.Net.Schema.Org.Things
 	public class Drug: Substance
 	{
 		///<summary>An active ingredient, typically chemical compounds and/or biologic substances.</summary>
-		public Text ActiveIngredient {get; set;}
+		public new Text ActiveIngredient {get; set;}
 		///<summary>A route by which this drug may be administered, e.g. 'oral'.</summary>
 		public Text AdministrationRoute {get; set;}
 		///<summary>Any precaution, guidance, contraindication, etc. related to consumption of alcohol while taking this drug.</summary>
@@ -40,7 +40,7 @@ namespace Bam.Net.Schema.Org.Things
 		///<summary>Link to the drug's label details.</summary>
 		public Url LabelDetails {get; set;}
 		///<summary>The drug or supplement's legal status, including any controlled substance schedules that apply.</summary>
-		public OneOfThese<DrugLegalStatus,MedicalEnumeration,Text> LegalStatus {get; set;}
+		public new OneOfThese<DrugLegalStatus,MedicalEnumeration,Text> LegalStatus {get; set;}
 		///<summary>The manufacturer of the product.</summary>
 		public Organization Manufacturer {get; set;}
 		///<summary>Recommended intake of this supplement for a given population as defined by a specific recommending authority.</summary>

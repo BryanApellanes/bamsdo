@@ -6,7 +6,7 @@ namespace Bam.Net.Schema.Org.Things
 	public class Accommodation: Place
 	{
 		///<summary>An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.</summary>
-		public LocationFeatureSpecification AmenityFeature {get; set;}
+		public new LocationFeatureSpecification AmenityFeature {get; set;}
 		///<summary>The size of the accommodation, e.g. in square meter or squarefoot.Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for square yard</summary>
 		public QuantitativeValue FloorSize {get; set;}
 		///<summary>The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.</summary>
