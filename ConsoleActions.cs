@@ -135,7 +135,7 @@ namespace Bam.Net
             }
             catch (Exception ex)
             {
-                OutLineFormat("Unable to write content for path {0}\r\n{1}\r\n\r\n{2}", ConsoleColor.DarkYellow, path, ex.Message, ex.StackTrace);
+                Message.PrintLine("Unable to write content for path {0}\r\n{1}\r\n\r\n{2}", ConsoleColor.DarkYellow, path, ex.Message, ex.StackTrace);
             }
         }
 
@@ -227,7 +227,7 @@ namespace Bam.Net
             }
             catch (Exception ex)
             {
-                OutLineFormat("An error occurred getting html for type {0}\r\n{1}\r\n\r\n{2}", ConsoleColor.Yellow, typeName, ex.Message, ex.StackTrace);
+                Message.PrintLine("An error occurred getting html for type {0}\r\n{1}\r\n\r\n{2}", ConsoleColor.Yellow, typeName, ex.Message, ex.StackTrace);
                 FailedTypeNames.Add(typeName);
                 return string.Empty;
             }
