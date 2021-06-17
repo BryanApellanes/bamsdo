@@ -42,9 +42,6 @@
     <DeployManifest Remove="obj\Debug\netcoreapp2.2\bamsdo.application" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Bam.Net\_lib\bam.net.core\bam.net.core.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Remove="bam.net.schema.org\**" />
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="bam.net.schema.org\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="bam.net.core" Version="1.0.6" />
   </ItemGroup>
   <Import Project="bam.net.schema.org\bam.net.schema.org.projitems" Label="Shared" />
   <Target Name="PublishAll" BeforeTargets="GenerateNuspec">
