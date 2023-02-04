@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <RootNamespace>Bam.Net.Application</RootNamespace>
     <PackageId>bamsdo</PackageId>
     <Version>1.0.5-test+27a1d73</Version>
@@ -43,15 +43,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="bam.net.schema.org\**" />
+    <Compile Remove="submodules\**" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="bam.net.schema.org\**" />
+    <EmbeddedResource Remove="submodules\**" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="bam.net.schema.org\**" />
+    <None Remove="submodules\**" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="bam.net.core" Version="1.0.6" />
+    <ProjectReference Include="submodules\bam.core\bam.core\bam.core.csproj" />
   </ItemGroup>
   <Import Project="bam.net.schema.org\bam.net.schema.org.projitems" Label="Shared" />
   <Target Name="PublishAll" BeforeTargets="GenerateNuspec">
